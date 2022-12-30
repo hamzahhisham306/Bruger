@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root{
+  --red:#ff3838;
+}
+
+*{
+  font-family: 'Nunito', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  outline: none; border:none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition:all .2s linear;
+}
+
+*::selection{
+  background:var(--red);
+  color:#fff;
+}
+
+html{
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body{
+  background:#f7f7f7;
+}
+.container .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0.5px 7px 15px rgba(0,0,0,0.1);
+}
+.container .header .logo{
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: gray;
+
+
+}
+.container .header .logo i{
+    font-size: 30px;
+    color: #ff3838;
+}
+.container .header ul{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 20px;
+
+}
+.container .header ul li{
+    list-style-type: none;
+    font-size: 25px;
+    color: gray;
+    cursor: pointer;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.container .header ul li:hover{
+    color: #ff3838;
+}
+
+.container .section-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url("./images/home-bg.jpg");
+}
+.container .section-text .text{
+     padding-left: 80px;   
+}
+.container .section-text .text p{
+    color: gray;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 50%;
+}
+.container .section-text .text button{
+    border: 1px solid #ff3838;
+    padding: 15px;
+    background: transparent;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.container .section-text .text h1{
+    font-size: 40px;
+}
+.image img{
+    animation: top-to-buttom 3s linear infinite;
+    -webkit-animation: top-to-buttom 3s linear infinite;
+}
+@keyframes top-to-buttom{
+    0%{
+        transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        -o-transform: translateY(0px);
+}
+   50%{
+       transform: translateY(20px);
+       -webkit-transform: translateY(20px);
+       -moz-transform: translateY(20px);
+       -ms-transform: translateY(20px);
+       -o-transform: translateY(20px);
+}
+
+}
+
+
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 2rem;
+    }
+    #img{
+     width: 500px;
+    }
+    
+    
+}
+
+.our-speciality{
+    padding-top: 70px;
+}
+.our-speciality .h2{
+    text-align: center ;
+    padding-bottom: 50px;
+    font-size: 50px;
+    color: gray;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding: 100px;
+}
+.card-3{
+  grid-column: 1/ 3;
+}
+.card-4{
+    grid-column: 3/5;
+}
+.our-speciality .cards .card{
+    background-color: #fff;
+    padding: 20px;
+    position: relative;
+    border: 1px solid gray;
+    overflow: hidden;
+
+}
+.our-speciality .cards .card p{
+    color: gray;
+}
+.our-speciality .cards .card:hover .content {
+ transform: translateY(100%);
+ -webkit-transform: translateY(100%);
+ -moz-transform: translateY(100%);
+ -ms-transform: translateY(100%);
+ -o-transform: translateY(100%);
+ transition: 0.5s;
+ -webkit-transition: 0.5s;
+ -moz-transition: 0.5s;
+ -ms-transition: 0.5s;
+ -o-transition: 0.5s;
+}
+.our-speciality .cards .card img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+.our-speciality .cards .card:hover img{
+    top: 0;
+}
+.popular h1{
+    text-align: center;
+}
+.popular h1 span{
+    color:#ff3838;
+
+}
+.popular .cards-popular .card-popular{
+    text-align: center;
+    border: 1px solid black;
+    padding: 30px;
+    position: relative;
+}
+.popular .cards-popular .card-popular span{
+    position:absolute;
+    top: 50px;
+    left: 40px;
+    font-size: 30px;
+    background-color: #ff3838;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.popular .cards-popular .card-popular i{
+    color: rgb(243, 243, 23);
+}
+.popular .cards-popular .card-popular button{
+    padding: 10px;
+    color: #ff3838;
+    border: 1px solid #ff3838;
+    background-color: transparent;
+    position: relative;
+    margin-top: 15px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+ 
+}
+.popular .cards-popular .card-popular button:hover {
+    color: #fff;
+    z-index: 100;
+    
+}
+.popular .cards-popular .card-popular button:hover::before{
+    width: 100%;
+    right:0 ;
+}
+.popular .cards-popular .card-popular button::before{
+ content: "";
+ position:absolute;
+ top: 0;
+ left: 0;
+ width: 0%;
+ height: 100%;
+ background: #ff3838;
+ transition: 0.3s linear;
+ z-index: -1;
+}
+.popular .cards-popular{
+    padding: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.popular .cards-popular .card-popular img{
+    width: 400px;
+}
+
+.delivery .container .boxs{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-left: 150px;
+    gap: 40px;
+}
+
+.delivery .container .boxs .box img{
+    border-radius: 50%;
+    border: 15px solid white;
+  
+}
+.delivery{
+  margin-bottom: 100px;
+}
+.food-gallery .food-boxs .food{
+    overflow: hidden;
+    position: relative;
+}
+.food-gallery .food-boxs .food:hover .content{
+    top: 0px;
+}
+.food-gallery .food-boxs .food:hover .content h2{
+  padding-top: 20px;
+}
+.food-gallery .food-boxs .food:hover .content p{
+    line-height: 1.5;
+    width: 80%;
+    padding-top: 10px;
+
+
+}
+.food-gallery .food-boxs .food .content{
+    position: absolute;
+    top: -100%;
+    background-color: rgb(250, 250, 250, 0.8);
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    padding-top: 5rem;
+    text-align: center;
+}
+.food-gallery .food-boxs .food img{
+ width:400px ;
+ z-index: -100;
+ border: 17px solid white;
+}
+.food-gallery .food-boxs{
+     gap: 10px;
+     display: grid;
+     overflow: hidden;
+
+     padding-left: 100px;
+     grid-template-columns: repeat(3, 1fr);
+}
+.food-gallery{
+    padding-bottom: 100px;
+}
